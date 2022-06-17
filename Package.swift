@@ -8,7 +8,8 @@ let package = Package(
     platforms: [.iOS(.v13)],
     products: [
         .library(name: "Utils", targets: ["Utils"]),
-        .library(name: "UiUtils", targets: ["UiUtils"])
+        .library(name: "UiUtils", targets: ["UiUtils"]),
+        .library(name: "CombineUtils", targets: ["CombineUtils"])
     ],
     dependencies: [
     ],
@@ -19,6 +20,10 @@ let package = Package(
         .testTarget(
             name: "UtilsTests",
             dependencies: ["Utils"]),
-        .target(name: "UiUtils")
+        .target(name: "UiUtils"),
+        .target(name: "CombineUtils"),
+        .testTarget(
+            name: "CombineUtilsTests",
+            dependencies: ["CombineUtils"])
     ]
 )

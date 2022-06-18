@@ -24,6 +24,6 @@ let package = Package(
         .target(name: "CombineUtils"),
         .testTarget(
             name: "CombineUtilsTests",
-            dependencies: ["CombineUtils"])
+            dependencies: ["CombineUtils", "Utils"])
     ]
 )
